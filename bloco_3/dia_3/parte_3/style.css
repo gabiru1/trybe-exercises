@@ -1,0 +1,18 @@
+p, h1, ul {
+    text-align: center;
+}
+
+li:hover {
+    background-color: blue;
+}
+
+li:active {
+    background-color: darkgreen;
+}
+
+li {
+    padding: 5px;
+    border: 50px;
+    list-style: inside;
+    
+}
