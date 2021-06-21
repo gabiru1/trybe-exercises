@@ -1,0 +1,19 @@
+h2, h1, ul {
+    text-align: center;
+}
+
+li:hover {
+    background-color: blue;
+}
+
+li:active {
+    background-color: darkgreen;
+    color: blueviolet;
+}
+
+ul {
+    padding: 5px;
+    border: 50px;
+    list-style: none;
+    
+}

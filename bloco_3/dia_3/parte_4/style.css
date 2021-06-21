@@ -1,0 +1,23 @@
+div:hover {
+    background-color: blue;
+}
+
+div:nth-child(4):hover {
+    background-color: green;
+}
+
+div:nth-child(5):hover {
+    background-color: yellow;
+}
+
+div:nth-child(6):hover {
+    background-color: brown;
+}
+
+div:nth-child(7):hover {
+    background-color: aqua;
+}
+
+div h3 {
+    font-style: italic;
+}
