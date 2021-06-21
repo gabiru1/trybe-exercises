@@ -2,7 +2,7 @@ div:hover {
     background-color: blue;
 }
 
-div:nth-child(4):hover{
+div:nth-child(4):hover {
     background-color: green;
 }
 
@@ -18,6 +18,6 @@ div:nth-child(7):hover {
     background-color: aqua;
 }
 
-div h3:nth-last-child(9) {
+div h3 {
     font-style: italic;
 }

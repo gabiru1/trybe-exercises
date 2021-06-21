@@ -1,0 +1,21 @@
+.cor {
+  background-color: yellow;
+}
+
+.par {
+  color: green;
+}
+
+.impar {
+  text-transform: uppercase;
+}
+
+h1,
+h3 {
+  color: red;
+}
+
+.aumenta {
+  font-size: 40px;
+  border: 1px solid black;
+}
