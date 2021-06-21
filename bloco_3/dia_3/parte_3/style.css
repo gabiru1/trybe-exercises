@@ -1,4 +1,4 @@
-p, h1, ul {
+h2, h1, ul {
     text-align: center;
 }
 
@@ -8,11 +8,12 @@ li:hover {
 
 li:active {
     background-color: darkgreen;
+    color: blueviolet;
 }
 
-li {
+ul {
     padding: 5px;
     border: 50px;
-    list-style: inside;
+    list-style: none;
     
 }
