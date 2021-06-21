@@ -19,3 +19,20 @@ h3 {
   font-size: 40px;
   border: 1px solid black;
 }
+
+ol li em {
+  font-weight: bolder;
+}
+
+li {
+  font-size: 20px;
+}
+
+.azuzinha,
+.rozinha {
+  color: blue;
+}
+
+.rozinha {
+  background-color: pink;
+}
