@@ -63,6 +63,7 @@
       let tagtitle = document.createElement("h1");
       tagtitle.innerText = title;
       tagbody.appendChild(tagtitle);
+      tagtitle.className = "title";
 
       let content1 = document.createElement("div");
       content1.className = "main-content";
@@ -89,6 +90,44 @@
       imagem.src = "https://picsum.photos/200";
       imagem.className = "small-image";
       content3.appendChild(imagem);
+
+      let lista = document.createElement("ul");
+      content4.appendChild(lista);
+
+      const elementList = [
+        "um",
+        "dois",
+        "tres",
+        "quatro",
+        "cinco",
+        "seis",
+        "sete",
+        "oito",
+        "nove",
+        "dez",
+      ];
+
+      for (const number in elementList) {
+        if (Object.hasOwnProperty.call(elementList, number)) {
+          const element = elementList[number];
+
+          numberElement = document.createElement("li");
+          numberElement.innerText = element;
+
+          lista.appendChild(numberElement);
+        }
+      }
+      for (let i = 0; i < 3; i++) {
+        const tagh3 = document.createElement("h3");
+
+        content1.appendChild(tagh3);
+
+        tagh3.className = "description";
+      }
+
+      content1.removeChild(content3);
+
+      content4.style.margin = "0 auto"
     </script>
   </body>
 </html>
