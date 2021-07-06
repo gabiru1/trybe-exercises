@@ -72,13 +72,21 @@
       content2.className = "center-content";
       content1.appendChild(content2);
 
-      let paragraph1 = document.createElement('p')
-      paragraph1.innerText = 'algum texto'
-      paragraph1.style.fontSize = '20px'
-      content2.appendChild(paragraph1)
+      let paragraph1 = document.createElement("p");
+      paragraph1.innerText = "algum texto";
+      paragraph1.style.fontSize = "20px";
+      content2.appendChild(paragraph1);
 
-      let content3 = document.createElement('div')
-      content3.className = 'left-content'
+      let content3 = document.createElement("div");
+      content3.className = "left-content";
+      content1.appendChild(content3);
+
+      let content4 = document.createElement("div");
+      content4.className = "right-content";
+      content1.appendChild(content4);
+
+      let imagem = document.createElement("img");
+      imagem.src = "https://picsum.photos/200";
     </script>
   </body>
 </html>
