@@ -58,10 +58,9 @@
   <body>
     <script>
       // COLOQUE SEU CÓDIGO AQUI
-      let title = "Exercício 5.2 - JavaScript DOM";
       let tagbody = document.getElementsByTagName("body")[0];
       let tagtitle = document.createElement("h1");
-      tagtitle.innerText = title;
+      tagtitle.innerText = "Exercício 5.2 - JavaScript DOM";
       tagbody.appendChild(tagtitle);
       tagtitle.className = "title";
 
@@ -108,14 +107,12 @@
       ];
 
       for (const number in elementList) {
-        if (Object.hasOwnProperty.call(elementList, number)) {
-          const element = elementList[number];
+        const element = elementList[number];
 
-          numberElement = document.createElement("li");
-          numberElement.innerText = element;
+        numberElement = document.createElement("li");
+        numberElement.innerText = element;
 
-          lista.appendChild(numberElement);
-        }
+        lista.appendChild(numberElement);
       }
       for (let i = 0; i < 3; i++) {
         const tagh3 = document.createElement("h3");
