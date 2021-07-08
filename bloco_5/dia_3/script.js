@@ -80,16 +80,68 @@ clickBotao();
 function clicksexta(SextaFeira) {
   let botaoSexta = document.createElement("button");
   botaoSexta.innerText = SextaFeira;
-  botaoSexta.td = "btn-holiday"
+  botaoSexta.id = "btn-friday";
 
-  let contButton = document.querySelector(".buttons-container")
+  let contButton = document.querySelector(".buttons-container");
 
-  contButton.appendChild(botaoSexta)
+  contButton.appendChild(botaoSexta);
 }
-clicksexta("Sexta-Feira")
+clicksexta("Sexta-feira");
 
 function sextou() {
+  let botaoSexta = document.querySelector("#btn-friday");
+  let friDays = document.querySelectorAll(".friday");
+  let sextas = [4, 11, 18, 25];
+
+  botaoSexta.addEventListener("click", function () {
+    for (let i = 0; i < friDays.length; i++) {
+      const element = friDays[i];
+
+      if (element.innerText === "Sextou!!!") {
+        element.innerText = sextas[i];
+      } else {
+        element.innerText = "Sextou!!!";
+      }
+    }
+  });
+}
+sextou();
+
+function aumentaDias() {
+  let bigDay = document.querySelector("#days");
+  bigDay.addEventListener("mouseover", function (big) {
+    big.target.style.fontSize = "30px";
+  });
+}
+aumentaDias();
+
+function shrinkDays() {
+  let shrinkDay = document.querySelector("#days");
+  shrinkDay.addEventListener("mouseout", function (little) {
+    little.target.style.fontSize = "20px";
+  });
+}
+shrinkDays();
+
+function tarefa(estudar) {
+  let task = document.createElement("span");
+  task.innerText = estudar;
+  let mytasks = document.querySelector(".my-tasks");
+
+  mytasks.appendChild(task);
+}
+tarefa("Estudar");
+
+function taskColor(cor) {
+  let corTask = document.createElement("div");
+  corTask.className = "task";
+  corTask.style.backgroundColor = cor;
+  let mytasks = document.querySelector(".my-tasks");
+
+  mytasks.appendChild(corTask)
+}
+taskColor("green");
+
+function evenetClick() {
   
 }
-
-
