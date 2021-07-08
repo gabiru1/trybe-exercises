@@ -32,21 +32,64 @@ function criaDays() {
 
     let elementDay = document.createElement("li");
     elementDay.innerText = element;
-    elementDay.className = "day";
-
     let ulDays = document.querySelector("#days");
 
-    ulDays.appendChild(elementDay);
-
-    if (elementDay === 24 || elementDay === 31) {
-      ulDays.classList = "holyday";
-    } else if (elementDay === 25) {
-      ulDays.className = "day holyday friday";
-    } else if (elementDay === 4 || elementDay === 11 || elementDay === 18) {
-      ulDays.className = "day friday";
+    if (element === 24 || element === 31) {
+      elementDay.className = "day holiday";
+    } else if (element === 25) {
+      elementDay.className = "day holiday friday";
+    } else if (element === 4 || element === 11 || element === 18) {
+      elementDay.className = "day friday";
     } else {
-      ulDays.className = "day";
+      elementDay.className = "day";
     }
+
+    ulDays.appendChild(elementDay);
   }
 }
 criaDays();
+
+function criaHoliDays(feriados) {
+  let botao = document.createElement("button");
+  botao.innerText = feriados;
+  botao.id = "btn-holiday";
+
+  let contButton = document.querySelector(".buttons-container");
+
+  contButton.appendChild(botao);
+}
+criaHoliDays("Feriados");
+
+function clickBotao() {
+  let botao = document.querySelector("#btn-holiday");
+  let holiDays = document.querySelectorAll(".holiday");
+  botao.addEventListener("click", function () {
+    for (let i = 0; i < holiDays.length; i++) {
+      const element = holiDays[i];
+
+      if (element.style.backgroundColor === "green") {
+        element.style.backgroundColor = "rgb(238,238,238)";
+      } else {
+        element.style.backgroundColor = "green";
+      }
+    }
+  });
+}
+clickBotao();
+
+function clicksexta(SextaFeira) {
+  let botaoSexta = document.createElement("button");
+  botaoSexta.innerText = SextaFeira;
+  botaoSexta.td = "btn-holiday"
+
+  let contButton = document.querySelector(".buttons-container")
+
+  contButton.appendChild(botaoSexta)
+}
+clicksexta("Sexta-Feira")
+
+function sextou() {
+  
+}
+
+
