@@ -73,10 +73,6 @@ app.post('/recipes', function (req, res) {
   res.status(201).json({ message: 'Recipe created successfully!'});
 });
 
-app.listen(3001, () => {
-  console.log('Aplicação ouvindo na porta 3001');
-});
-
 app.put('/recipes/:id', function (req, res) {
   const { id } = req.params;
   const { name, price } = req.body;
@@ -98,4 +94,8 @@ app.delete('/recipes/:id', function (req, res) {
   recipes.splice(recipeIndex, 1);
 
   res.status(204).end();
+});
+
+app.listen(3001, () => {
+  console.log('Aplicação ouvindo na porta 3001');
 });
