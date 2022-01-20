@@ -1,6 +1,7 @@
 /* index.js */
 const express = require('express');
 const bodyParser = require('body-parser');
+const authMiddleware = require('./auth-middleware');
 
 const app = express();
 
@@ -9,6 +10,12 @@ const cors = require('cors');
 app.use(bodyParser.json());
 
 app.use(cors());
+
+app.get('/open', function (req, res) {
+  res.send('open!')
+});
+
+app.use(authMiddleware);
 
 const drinks = [
   { id: 1, name: 'Refrigerante Lata', price: 5.0 },
@@ -105,7 +112,8 @@ function validateName(req, res, next) {
 
 app.post('/recipes', validateName, function (req, res) {
   const { id, name, price } = req.body;
-  recipes.push({ id, name, price});
+  const { username } = req.user; // Aqui estamos acessando o usuário encontrado no middleware de autenticação.
+  recipes.push({ id, name, price, chef: username });
   res.status(201).json({ message: 'Recipe created successfully!'});
 });
 
